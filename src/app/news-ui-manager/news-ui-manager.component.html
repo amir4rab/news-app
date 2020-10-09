@@ -1,0 +1,4 @@
+<app-news-slider [slidesData]='newsData'></app-news-slider>
+<div *ngFor="let newsData of newsCardsData">
+  <app-news-card [newsData]='newsData'></app-news-card>
+</div>

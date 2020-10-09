@@ -1,0 +1,41 @@
+.slide-indicator{
+  width: 50%;
+  margin: 0 auto;
+  max-width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding: .5rem 0;
+  div{
+    background-color: #23e7c0c0;
+    width: .65rem;
+    height: .65rem;
+    border-radius: 50%;
+    transition: width .3s ease-in-out,
+                height .3s ease-in-out,
+                background-color .3s ease-in-out,;
+    &:hover{
+      cursor: pointer;
+      background-color: darken(#23e7c0c0, 25%);
+    }
+  }
+  .active{
+    width: .85rem;
+    height: .85rem;
+    background-color: #23e7c0;
+  }
+}
+.slider__inner{
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform .5s ease-in-out;
+  // overflow: hidden;
+}
+.loading{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

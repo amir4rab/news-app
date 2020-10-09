@@ -1,0 +1,33 @@
+.card--inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-flow: row;
+  .details{
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-between;
+    flex-direction: column;
+    .title{
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding-bottom: .5rem;
+    }
+    .sub-details{
+      display: flex;
+      font-size: 0.625rem;
+      .strong{
+        margin-right: .5rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .temp{
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+.loading{
+  transform: scale(.5);
+}

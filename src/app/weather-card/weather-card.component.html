@@ -1,0 +1,15 @@
+<app-card>
+  <div *ngIf="!loading" class="card--inner">
+    <div class="details">
+      <div class="title">{{cityLocation}}</div>
+      <div class="sub-details">
+        <div class="strong">{{weatherDescription}}</div>
+        <div>Feels like: {{feelsLike}}°</div>
+      </div>
+    </div>
+    <div class="temp">{{temp}}°</div>
+  </div>
+  <div class="loading" *ngIf="loading">
+    <app-loading-animation></app-loading-animation>
+  </div>
+</app-card>

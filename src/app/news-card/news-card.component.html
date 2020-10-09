@@ -1,0 +1,20 @@
+<app-slide>
+  <div class="news-card">
+    <a [href]='newsData.url' target="_">
+      <div class="details">
+        <div class="title">
+          {{newsData.title | removeAuthor | shorten}}
+        </div>
+        <div class="sub-details">
+          <div class="author">
+            {{newsData.author}}
+          </div>
+          <div class="publishedAt">
+            {{newsData.publishedAt | date:'short'}}
+          </div>
+        </div>
+      </div>
+      <img [src]='newsData.urlToImage' lazy alt="">
+    </a>
+  </div>
+</app-slide>

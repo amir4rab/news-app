@@ -1,0 +1,18 @@
+<div class="slide active">
+  <a [href]="newsData.url" target="_">
+    <div class="details">
+      <div class="main">
+        <div class="author">
+          {{newsData.author}}
+        </div>
+        <div class="date">
+          {{newsData.publishedAt | date:'short'}}
+        </div>
+      </div>
+      <div class="title">
+        {{newsData.title | removeAuthor}}
+      </div>
+    </div>
+  </a>
+  <img [src]="newsData.urlToImage" alt="">
+</div>

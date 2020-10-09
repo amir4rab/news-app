@@ -1,0 +1,20 @@
+<div>
+  <app-slide>
+    <div class="slider" #sliderOuter>
+      <div [style.transform]='sliderTransform' class="slider__inner">
+        <div *ngFor="let slide of slidesData | slice: 0:5">
+          <app-news-slide [newsData]=slide *ngIf="slidesData.length !== 0"></app-news-slide>
+        </div>
+      </div>
+      <div *ngIf="slidesData.length === 0" class="loading">
+        <app-loading-animation></app-loading-animation>
+      </div>
+    </div>
+  </app-slide>
+  <div class="slide-indicator" #slideIndicators>
+    <div *ngFor="let slide of slidesData | slice: 0:5;let i = index">
+      <div *ngIf="i === 0" class="active" (click)="onScrollTo(i, sliderOuter, slideIndicators, $event)"></div>
+      <div *ngIf="i !== 0" (click)="onScrollTo(i, sliderOuter, slideIndicators, $event);"></div>
+    </div>
+  </div>
+</div>

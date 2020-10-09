@@ -1,0 +1,17 @@
+$darkBg : #3D3E3F;
+$light-green : #23e7c0;
+$darken-green : darken($light-green , 10%);
+.navbar-top{
+  background: #3D3E3F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem .9rem;
+  &__title{
+    color: $light-green;
+    font-size: 1.5rem;
+  }
+  &__links{
+    display: flex;
+  }
+}
